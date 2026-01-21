@@ -1,19 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { FileText, Download, BookOpen } from "lucide-react";
+import Link from "next/link";
 
 const downloads = [
   {
     icon: FileText,
     title: "Root Installer README",
     description: "Complete installation guide for production deployment with root access. Includes system requirements and configuration steps.",
-    href: "/root-installer-readme",
+    href: "/root-based-installation",
     linkText: "View Documentation",
   },
   {
     icon: BookOpen,
     title: "User-Based Installer README",
     description: "Installation instructions for environments with restricted user permissions. Covers non-root deployment scenarios.",
-    href: "/user-based-installer-readme",
+    href: "/user-based-installation",
     linkText: "View Documentation",
   },
   {
@@ -54,9 +55,15 @@ const DownloadsSection = () => {
               </p>
 
               <Button variant="download" className="w-full" asChild>
-                <a href={item.href}>
-                  {item.linkText}
-                </a>
+                {item.href === "/hiretrack-installer" ? (
+                  <a href={item.href}>
+                    {item.linkText}
+                  </a>
+                ) : (
+                  <Link href={item.href}>
+                    {item.linkText}
+                  </Link>
+                )}
               </Button>
             </div>
           ))}

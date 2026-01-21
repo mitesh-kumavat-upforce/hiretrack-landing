@@ -50,6 +50,11 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button variant="hero" size="xl" asChild>
+              <a href="/installation-guide">
+                View Installation Guide
+              </a>
+            </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a href="#downloads">
                 View Documentation
