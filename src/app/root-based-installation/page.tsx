@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowLeft, Download, Terminal, Server, CheckCircle2, AlertTriangle, Shield } from 'lucide-react';
+import { ArrowLeft, Download, Terminal, Server, AlertTriangle, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import CopyableCode from '@/components/CopyableCode';
 import { useEffect, useState } from 'react';

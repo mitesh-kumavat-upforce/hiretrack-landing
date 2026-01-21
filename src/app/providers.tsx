@@ -5,7 +5,11 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { ThemeProvider } from 'next-themes';
 import { useState } from 'react';
 
-export function Providers({ children }: { children: React.ReactNode }) {
+type ProvidersProps = {
+  children?: React.ReactNode;
+};
+
+export const Providers: React.FC<ProvidersProps> = ({ children }) => {
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -25,4 +29,4 @@ export function Providers({ children }: { children: React.ReactNode }) {
       </ThemeProvider>
     </QueryClientProvider>
   );
-}
+};
