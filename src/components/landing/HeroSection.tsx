@@ -3,9 +3,9 @@ import { CheckCircle2 } from "lucide-react";
 
 const HeroSection = () => {
   const highlights = [
-    "AI-Powered Tracking",
-    "Real-Time Pipeline",
-    "Role-Based Access",
+    "AI Resume Evaluation",
+    "Pipeline & Time-to-Hire",
+    "Custom Branding & Storage",
   ];
 
   return (
@@ -23,19 +23,30 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-8">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-sm font-medium text-accent">Enterprise-Ready Hiring Platform</span>
+            <svg
+              className="w-4 h-4 text-accent"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+            </svg>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance leading-tight">
-            Smart AI-Powered Hiring for{" "}
-            <span className="text-accent">Modern Teams</span>
+            Intelligent Hiring Platform{" "}
+            <span className="text-accent">for Enterprise Teams</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance">
-            HireTrack manages your complete recruitment lifecycle with real-time tracking, 
-            advanced analytics, and seamless integrations. Built for HR teams, interviewers, 
-            and candidates.
+            AI-powered resume evaluation streamlines candidate screening. Track and manage your hiring
+            pipeline, reduce time-to-hire, and customize branding, storage, and infrastructure.
           </p>
 
           {/* Highlights */}
@@ -74,7 +85,23 @@ const HeroSection = () => {
                 <div className="w-3 h-3 rounded-full bg-green-400/60" />
               </div>
               <div className="p-6 lg:p-8 bg-gradient-to-br from-muted/30 to-background min-h-[300px] lg:min-h-[400px] flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-4 w-full max-w-3xl">
+                <div className="grid grid-cols-3 gap-4 w-full max-w-3xl relative">
+                  <div className="absolute -top-6 -right-4 hidden md:flex items-center gap-2 px-3 py-2 rounded-lg bg-background/90 border border-border shadow-sm">
+                    <svg
+                      className="w-4 h-4 text-accent"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 7h18M7 7v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V7" />
+                      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                    </svg>
+                    <span className="text-xs font-medium text-foreground">Pipeline</span>
+                  </div>
                   {/* Pipeline preview */}
                   <div className="space-y-3">
                     <div className="h-3 w-20 bg-accent/30 rounded" />

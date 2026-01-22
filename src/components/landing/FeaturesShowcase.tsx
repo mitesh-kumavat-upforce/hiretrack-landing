@@ -113,7 +113,6 @@ const featureCategories = [
           "Public Job URLs: Shareable job links for candidates",
           "Branded Career Portal: Customizable job application portal for candidates",
           "Multi-step Application Process: Configure single-step or multi-step application workflows",
-          "Screening Questions: Pre-interview assessment questions"
         ]
       },
       {
@@ -170,7 +169,7 @@ const featureCategories = [
           "Manual Candidate Entry: Add candidates manually with full profile",
           "Bulk Import: CSV import for multiple candidates",
           "Guest Application: Allow candidates to apply without account",
-          "Candidate Sharing: Share candidate profiles via secure PDF links",
+          "Candidate Sharing: Export candidate profiles via secure PDF generation",
           "Candidate Details Updates: Track all changes to candidate information",
           "Relevant Experience Tracking: Track candidate experience relevance"
         ]
@@ -217,9 +216,6 @@ const featureCategories = [
         highlights: [
           "Full Calendar View: Visual calendar interface for interview scheduling",
           "Interview Calendar: Dedicated calendar view for all interviews",
-          "Availability Checking: Check interviewer availability",
-          "Conflict Detection: Identify scheduling conflicts",
-          "Recurring Meetings: Support for series of interviews"
         ]
       }
     ]
@@ -237,8 +233,6 @@ const featureCategories = [
           "Multi-criteria Search: Search candidates by name, email, phone, skills, location, experience",
           "Quick Search: Fast search across all candidate fields",
           "Advanced Search: Complex search queries with multiple criteria",
-          "Saved Searches: Save and reuse search queries",
-          "Search History: Track recent searches"
         ]
       },
       {
@@ -262,7 +256,6 @@ const featureCategories = [
           "List View: Compact candidate list display",
           "Grid View: Visual candidate cards",
           "Sort Options: Sort by various criteria (date, name, score, etc.)",
-          "Export Results: Download filtered data as CSV/PDF",
           "Bulk Actions: Select multiple candidates for bulk operations"
         ]
       }
@@ -310,7 +303,7 @@ const featureCategories = [
           "Real-time notification updates",
           "In-App Notifications: Real-time in-app notification system",
           "Notification Types: New applications, interview assignments, status updates, new remarks, step completed, mentions, and more",
-          "Notification Preferences: User-level and global notification settings",
+          "Notification Preferences: User-level and global notification and Job-level notification settings",
           "Email Notification Settings: Per-user email notification preferences",
           "Job-Specific Notifications: Configure notifications per job",
           "Notification Count: Real-time unread notification count",
@@ -320,7 +313,6 @@ const featureCategories = [
       {
         title: "Communication Tools",
         highlights: [
-          "Mass Communications: Send emails to multiple candidates",
           "Scheduled Messages: Schedule future-dated communications",
           "Template Variables: Dynamic content insertion",
           "Direct Messages: One-on-one candidate communication",
@@ -360,7 +352,7 @@ const featureCategories = [
           },
           {
             name: "AWS S3 (Amazon Cloud Storage)",
-            items: ["Enterprise Cloud Storage: Scalable Amazon Web Services S3 storage", "Unlimited scalability", "High durability and availability (99.999999999% durability)", "Global edge locations for fast access", "Pay-as-you-go pricing"]
+            items: ["Enterprise Cloud Storage: Scalable Amazon Web Services S3 storage", "Unlimited scalability", "Global edge locations for fast access", "Pay-as-you-go pricing"]
           }
         ]
       },
@@ -415,9 +407,7 @@ const featureCategories = [
         highlights: [
           "Custom Logos: Upload organization logo",
           "Color Scheme: Customize brand colors",
-          "Font Selection: Typography choices",
           "Logo Placement: Header and footer customization",
-          "Custom CSS: Advanced styling options",
           "Branded Email Templates: Customize email appearance"
         ]
       },
@@ -426,8 +416,6 @@ const featureCategories = [
         highlights: [
           "Separate Workspaces: Isolated workspaces for different organizations",
           "Organization-Specific Settings: Custom settings per organization",
-          "Organization Tags: Tag and categorize organizations",
-          "Default Lanes: Set default pipeline stages per organization"
         ]
       }
     ]
@@ -442,12 +430,11 @@ const featureCategories = [
       {
         title: "Candidate Analytics",
         highlights: [
-          "Candidate Funnel Report: Visual representation of candidate flow through stages",
+          "Candidate Funnel Report: Visual representation of candidate by statuses",
           "Conversion Rates: Calculate conversion rates between stages",
           "Time-in-Stage Analysis: Average time candidates spend in each stage",
           "Application Trends: Daily, weekly, monthly application volumes",
           "Peak Time Analysis: Identify peak application periods",
-          "Seasonal Pattern Analysis: Detect seasonal hiring patterns"
         ]
       },
       {
@@ -455,8 +442,6 @@ const featureCategories = [
         highlights: [
           "Job Performance Metrics: Track application count, time-to-fill, success rates",
           "Top Performing Jobs: Identify best-performing job postings",
-          "Job Source Analysis: Track effectiveness of different job sources",
-          "Cost per Source: Analyze cost per candidate source",
           "Application Volume Trends: Track application trends over time"
         ]
       },
@@ -464,11 +449,7 @@ const featureCategories = [
         title: "Interview Analytics",
         highlights: [
           "Interview Assignment Analytics: Track interviewer workload and assignments",
-          "Interviewer Performance: Compare interviewer performance metrics",
           "Workload Balancing: Analyze workload distribution",
-          "Interview Scheduling Efficiency: Track scheduling patterns",
-          "Completion Rate Tracking: Monitor interview completion rates",
-          "Interviewer Performance Metrics: Success rate, average scores, duration analysis"
         ]
       },
       {
@@ -477,7 +458,7 @@ const featureCategories = [
           "Real-time Data: Live data updates",
           "Date Range Filtering: Filter reports by date ranges",
           "Job-Specific Filtering: Filter analytics by job",
-          "Export Options: Export reports as CSV/PDF",
+          "Export Options: Export reports as CSV",
           "Interactive Charts: Funnel charts, bar charts, line charts, pie charts",
           "Data Visualization: Multiple chart types for different insights"
         ]
@@ -492,24 +473,12 @@ const featureCategories = [
     color: "from-emerald-500 to-green-500",
     features: [
       {
-        title: "Checklist Templates",
-        highlights: [
-          "Checklist Templates: Create reusable checklist templates",
-          "Incoming Checklists: Checklists for incoming candidates",
-          "Outgoing Checklists: Checklists for outgoing processes",
-          "Template Management: Create, edit, and manage checklist templates",
-          "Active/Inactive Templates: Enable or disable templates",
-          "Job-Specific Checklists: Configure checklists per job"
-        ]
-      },
-      {
         title: "Checklist Operations",
         highlights: [
           "Checklist Submission: Submit completed checklists",
           "Checklist Validation: Validate checklist completion",
           "Checklist Tracking: Track checklist progress",
           "Step Completion: Mark individual steps as complete",
-          "Step Completion Notifications: Notify on step completion"
         ]
       }
     ]
@@ -532,7 +501,6 @@ const featureCategories = [
           "First Organization Privileges: First organization can control multi-tenant settings",
           "Organization Creation: Create new organizations with isolated workspaces",
           "Organization Management: Manage multiple organizations from admin panel",
-          "Organization Tags: Tag and categorize organizations",
           "Organization-Specific File Storage: Each organization can have separate file storage directories"
         ]
       },
@@ -562,13 +530,10 @@ const featureCategories = [
       {
         title: "Authentication",
         highlights: [
-          "JWT-based Authentication: Secure token-based authentication",
           "Password Security: Encrypted password storage with bcrypt hashing",
           "Two-Factor Authentication (2FA): Organization-level 2FA enablement",
           "Password Reset: Secure password reset with tokens",
           "Session Management: Secure session handling with automatic logout",
-          "Google OAuth: Google sign-in integration",
-          "Token Refresh: Automatic token refresh mechanism",
           "Multi-Organization Login: Support for users belonging to multiple organizations"
         ],
         subFeatures: [
@@ -578,24 +543,7 @@ const featureCategories = [
           }
         ]
       },
-      {
-        title: "User Management",
-        highlights: [
-          "User Creation: Create users with role assignment",
-          "User Roles: Four distinct user roles (Administrator, HR Manager, Interviewer, Candidate)",
-          "User Profile Management: Edit user profiles, update information",
-          "Password Management: Reset and manage user passwords",
-          "User Search: Search and filter users by name, email, role",
-          "User Activity Tracking: Track user login and activity",
-          "User Deactivation: Temporarily disable user accounts",
-        ],
-        subFeatures: [
-          {
-            name: "User Roles",
-            items: ["Administrator: Full system access, can manage all settings", "HR Manager: Hiring process management, job and candidate management", "Interviewer: Candidate evaluation, interview scheduling", "Candidate: Application management"]
-          }
-        ]
-      },
+      
      
     ]
   },
@@ -633,7 +581,6 @@ const featureCategories = [
           "User Activation: Activate/deactivate users",
           "User Profile Management: Edit user profiles",
           "Password Management: Reset and manage passwords",
-          "User Search: Search and filter users"
         ]
       },
       {
@@ -670,7 +617,6 @@ const featureCategories = [
           "Nginx Logs: Access Nginx server logs",
           "PM2 Logs: View PM2 process logs",
           "Error Tracking: Track and monitor errors",
-          "Performance Monitoring: Monitor system performance",
           "Disk Space Monitoring: Track disk usage"
         ]
       }
@@ -743,8 +689,7 @@ export function FeaturesShowcase() {
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance">
               Explore all the powerful features that make HireTrack the most comprehensive 
-              AI-powered hiring management platform. From AI-powered resume analysis to 
-              real-time collaboration, everything you need is here.
+              customised hiring management platform.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-6 mb-10">

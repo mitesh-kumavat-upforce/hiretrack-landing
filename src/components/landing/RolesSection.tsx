@@ -35,7 +35,6 @@ const roles = [
       "Browse and apply for open positions",
       "Upload resumes and portfolios",
       "Track application status in real-time",
-      "Receive automated notifications",
       "Join scheduled video interviews",
       "View feedback when shared",
     ],
