@@ -12,7 +12,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-foreground text-background border-t-4 border-accent">
+    <footer className="relative bg-primary text-primary-foreground border-t-4 border-accent">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div 
@@ -56,7 +56,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-background/80 hover:text-background text-sm transition-colors duration-200"
+                  className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors duration-200"
                 >
                   {link.label}
                 </Link>
@@ -66,8 +66,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-background/20 py-4">
-          <p className="text-background/60 text-xs text-center">
+        <div className="border-t border-primary-foreground/20 py-4">
+          <p className="text-primary-foreground/60 text-xs text-center">
             © {currentYear} HireTrack
           </p>
         </div>

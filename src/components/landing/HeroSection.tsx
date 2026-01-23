@@ -24,7 +24,7 @@ const HeroSection = () => {
   const highlights = [
     "AI Resume Evaluation",
     "Advanced Analytics & Insights",
-    "Custom Branding & Storage",
+    "Custom Forms, Branding & Storage"
   ];
 
   const demos = [
@@ -132,7 +132,7 @@ const HeroSection = () => {
             }}
           >
             <motion.div 
-              className="relative bg-card rounded-xl border border-border overflow-hidden drop-shadow-4xl shadow-accent/20"
+              className="relative bg-card rounded-xl border border-border overflow-hidden shadow-2xl"
               style={{
                 rotateX,
                 y: translateY,
@@ -140,6 +140,7 @@ const HeroSection = () => {
                 transformOrigin: "center center",
                 willChange: "transform",
                 backfaceVisibility: "hidden",
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 60px -15px hsl(var(--accent) / 0.3), 0 0 100px -30px hsl(var(--accent) / 0.15)",
               }}
             >
               <div className="relative w-full aspect-video p-3 rounded-lg overflow-hidden">

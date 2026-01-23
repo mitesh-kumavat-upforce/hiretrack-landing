@@ -49,7 +49,7 @@ const HowItWorksSection = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px hidden md:block" />
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent/60 to-accent md:-translate-x-1/2 hidden md:block z-0" />
 
           <div className="space-y-8 md:space-y-12">
             {steps.map((step, index) => (
@@ -60,8 +60,8 @@ const HowItWorksSection = () => {
                 }`}
               >
                 {/* Content */}
-                <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                  <div className={`card-elevated p-6 inline-block ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"}`}>
+                <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"} relative`}>
+                  <div className={`card-elevated p-6 inline-block relative z-10 ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"}`}>
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-2xl font-bold text-accent">{step.number}</span>
                       <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
@@ -73,8 +73,8 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* Timeline dot */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-background border-2 border-accent items-center justify-center">
-                  <CircleDot className="w-4 h-4 text-accent" />
+                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background border-4 border-accent items-center justify-center z-20 shadow-md">
+                  <CircleDot className="w-5 h-5 text-accent fill-accent" />
                 </div>
 
                 {/* Spacer for alternating layout */}

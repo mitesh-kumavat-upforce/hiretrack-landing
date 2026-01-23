@@ -19,27 +19,32 @@ export default function RootBasedInstallation() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Home</span>
-          </Link>
-          <div className="flex items-center gap-3">
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/user-based-installation" className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                User-Based Guide
-              </Link>
-            </Button>
-            <Button variant="download" size="sm" asChild>
-              <a href={INSTALLER_URL}>
-                <Download className="w-4 h-4 mr-2" />
-                Download Installer
-              </a>
-            </Button>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm sm:text-base"
+            >
+              <ArrowLeft className="w-4 h-4 flex-shrink-0" />
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Home</span>
+            </Link>
+            <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
+              <Button variant="outline" size="sm" className="flex-1 sm:flex-initial" asChild>
+                <Link href="/user-based-installation" className="flex items-center justify-center gap-2">
+                  <Shield className="w-4 h-4 flex-shrink-0" />
+                  <span className="hidden sm:inline">User-Based Guide</span>
+                  <span className="sm:hidden">User</span>
+                </Link>
+              </Button>
+              <Button variant="download" size="sm" className="flex-1 sm:flex-initial" asChild>
+                <a href={INSTALLER_URL} className="flex items-center justify-center gap-2">
+                  <Download className="w-4 h-4 flex-shrink-0" />
+                  <span className="hidden sm:inline">Download Installer</span>
+                  <span className="sm:hidden">Download</span>
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </header>

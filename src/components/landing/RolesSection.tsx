@@ -3,7 +3,7 @@ import { UserCog, ClipboardCheck, UserCircle } from "lucide-react";
 const roles = [
   {
     icon: UserCog,
-    title: "HR Admins",
+    title: "HR / Admins",
     description: "Full control over the hiring process",
     capabilities: [
       "Manage job postings and requirements",
