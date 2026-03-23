@@ -490,6 +490,7 @@ Defaults:hiretrack secure_path=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 hiretrack ALL=(root) NOPASSWD: \\
     /usr/bin/tee /etc/nginx/sites-available/*, \\
+    /usr/bin/tee /etc/apt/sources.list.d/*, \\
     /usr/bin/ln, \\
     /usr/sbin/nginx -t, \\
     /usr/sbin/nginx, \\
