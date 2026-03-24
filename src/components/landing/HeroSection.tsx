@@ -3,28 +3,33 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   // Clean scroll-based 3D rotation - starts rotated up, rotates to straight (0)
   // Make rotateX reach 0deg by halfway through scroll
   const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [110, 0, 0]);
-  
+
   // Parallax movement - moves up as you scroll down
   const translateY = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   const highlights = [
     "AI Resume Evaluation",
     "Advanced Analytics & Insights",
-    "Custom Forms, Branding & Storage"
+    "Custom Forms, Branding & Storage",
   ];
 
   const demos = [
@@ -46,29 +51,30 @@ const HeroSection = () => {
   }, [demos.length]);
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative pt-40 pb-20 lg:pt-48 lg:pb-28 overflow-hidden bg-gradient-to-b from-background via-muted/20 to-background"
     >
       {/* Clean dot pattern with fade to bottom */}
-      <div 
+      <div
         className="absolute inset-0 opacity-60"
         style={{
           backgroundImage: `
             radial-gradient(circle at 1px 1px, hsl(var(--accent) / 0.25) 2px, transparent 0)
           `,
-          backgroundSize: '20px 20px',
+          backgroundSize: "20px 20px",
         }}
       />
-      
+
       {/* Gradient fade overlay - fades pattern to bottom */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, hsl(var(--background) / 0.6) 70%, hsl(var(--background)) 100%)',
+          background:
+            "linear-gradient(to bottom, transparent 0%, transparent 40%, hsl(var(--background) / 0.6) 70%, hsl(var(--background)) 100%)",
         }}
       />
-      
+
       {/* Subtle gradient orbs */}
       <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
@@ -83,23 +89,27 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance leading-tight tracking-tight">
-            <span className="block">
-              Intelligent Hiring Platform{" "}
-            </span>
+            <span className="block">Intelligent Hiring Platform </span>
             <span className="block mt-2">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-dark ">for Enterprise Teams</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-dark ">
+                for Enterprise Teams
+              </span>
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance leading-relaxed">
-          Streamline your hiring pipeline, make data-driven decisions with advanced analytics and customizable options
+            Streamline your hiring pipeline, make data-driven decisions with
+            advanced analytics and customizable options
           </p>
 
           {/* Highlights */}
           <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
             {highlights.map((highlight) => (
-              <div key={highlight} className="flex items-center gap-2 text-sm font-medium text-muted-foreground bg-background/50 px-3 py-1 rounded-full border border-border/50 shadow-sm">
+              <div
+                key={highlight}
+                className="flex items-center gap-2 text-sm font-medium text-muted-foreground bg-background/50 px-3 py-1 rounded-full border border-border/50 shadow-sm"
+              >
                 <CheckCircle2 className="w-4 h-4 text-accent" />
                 <span>{highlight}</span>
               </div>
@@ -108,22 +118,28 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" className="shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all duration-300" asChild>
-              <a href="/installation-guide">
-                View Installation Guide
-              </a>
+            <Button
+              variant="hero"
+              size="xl"
+              className="shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all duration-300"
+              asChild
+            >
+              <a href="/installation-guide">View Installation Guide</a>
             </Button>
-            <Button variant="outline" size="xl" className="bg-background/50 backdrop-blur-sm hover:bg-background/80" asChild>
-              <a href="/#downloads">
-                View Documentation
-              </a>
+            <Button
+              variant="outline"
+              size="xl"
+              className="bg-background/50 backdrop-blur-sm hover:bg-background/80"
+              asChild
+            >
+              <a href="/features">View All Features</a>
             </Button>
           </div>
         </div>
 
         {/* Demo GIFs Carousel with Clean 3D Rotation and Parallax */}
         <div className="mt-16 lg:mt-24 relative overflow-visible">
-          <div 
+          <div
             className="relative mx-auto max-w-6xl"
             style={{
               perspective: "1200px",
@@ -131,7 +147,7 @@ const HeroSection = () => {
               transformStyle: "preserve-3d",
             }}
           >
-            <motion.div 
+            <motion.div
               className="relative bg-card rounded-xl border border-border overflow-hidden shadow-2xl"
               style={{
                 rotateX,
@@ -140,7 +156,8 @@ const HeroSection = () => {
                 transformOrigin: "center center",
                 willChange: "transform",
                 backfaceVisibility: "hidden",
-                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 60px -15px hsl(var(--accent) / 0.3), 0 0 100px -30px hsl(var(--accent) / 0.15)",
+                boxShadow:
+                  "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 60px -15px hsl(var(--accent) / 0.3), 0 0 100px -30px hsl(var(--accent) / 0.15)",
               }}
             >
               <div className="relative w-full aspect-video p-3 rounded-lg overflow-hidden">
@@ -162,7 +179,7 @@ const HeroSection = () => {
                     />
                   </motion.div>
                 </AnimatePresence>
-                
+
                 {/* Progress indicators */}
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                   {demos.map((_, index) => (
