@@ -650,7 +650,11 @@ hiretrack ALL=(root) NOPASSWD: \\
               <li>Set up PM2 process management</li>
               <li>Configure Nginx reverse proxy</li>
               <li>Set up SSL certificates (Let&apos;s Encrypt)</li>
-              <li>Configure automatic updates via cron</li>
+              <li>
+                Configure automatic updates via cron & set your preffered
+                maintenance time zone
+              </li>
+
               <li>Start the application</li>
             </ol>
             <p className="text-sm text-muted-foreground mt-4">
